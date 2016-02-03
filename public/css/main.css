@@ -7,14 +7,6 @@ body, html {
 
 
 
-.jumbotron-background { 
-  background: url("../img/books.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100%;
-}
 
 h1, h2 {
 	text-align: center;
@@ -24,9 +16,6 @@ h1 {
     font-size: 4em;
     text-shadow: 5px 5px #C2DDDE;
     color: black;
-    -webkit-text-fill-color: black;
-    -webkit-text-stroke-color: black;
-    text-decoration: blink;
 }
 
 	  
@@ -49,6 +38,16 @@ h1 {
 	border: none;
 }
 
+
+.jumbotron-background { 
+  background: url("../img/books.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 1000px;
+}
+
 .title {
 	font-size: 2em;
 	font-family: "Oswald";
@@ -61,6 +60,25 @@ h1 {
 	float: left;
 	height: 50px;
 	margin: 5px 2px 5px 20px;
+}
+
+.main-title {
+	padding-top: 70px;
+	width: 45%;
+	margin: 0px auto;
+}
+
+.main-title h1 {
+	color: white;
+	font-weight: 100;
+	font-size: 3em;
+    text-shadow: 5px 5px 5px #000000;
+}
+
+.main-title h2 {
+	font-size: 1.5em;
+	color: white;
+	text-shadow: 5px 5px 5px #000000;
 }
 
 #signup-container {
@@ -92,7 +110,7 @@ h1 {
 }
 
 #signup-form h2 {
-	padding: 20px;
+	padding: 20px 0;
 	background-color: #2E6DA4;
 }
 
@@ -230,10 +248,54 @@ i.inactive {color: #d9534f}
 
 }
 
+
+
+/* GENERAL FORM STYLING ON REDUCED WIDTH */
+
+
+@media (max-width: 1000px) {
+
+
+
+#signup-container {
+	width: 50%;
+	margin: 80px auto;
+	text-align: center;
+}
+
+#signup-form {
+	width: 75%;
+	position: absolute;
+	top: 100px;
+	left: 10%;
+	color: white;
+}
+
+
+.overlay {
+	background-color: rgba(0,0,0,0.9);
+	width: 65%;
+	height: 700px;
+	position: fixed;
+	top: 15%;
+	left: 17.5%;
+	text-align: center;
+	border-radius: 5px;
+}
+
+#overlay {
+	display: none;
+}
+
+}
+
 /*NAV BUTTONS AND TITLE ON REDUCED WIDTH */
 
 @media (max-width: 800px) {
 
+.main-title {
+	width: 60%;
+}
 
 #title-bundle {
 	margin: 0px auto;
@@ -279,11 +341,15 @@ i.inactive {color: #d9534f}
 
 
 
+
 }
 
 
 @media (max-width: 550px) {
 
+.main-title {
+	width: 80%;
+}
 
 #rct-header {
 	height: 330px;
@@ -299,45 +365,24 @@ i.inactive {color: #d9534f}
 	margin: 10px auto;
 }
 
-
-}
-
-
-/* GENERAL FORM STYLING ON REDUCED WIDTH */
-
-
-@media (max-width: 1000px) {
-
-
-
 #signup-container {
-	width: 50%;
-	margin: 80px auto;
-	text-align: center;
+	width: 90%;
 }
 
 #signup-form {
-	width: 75%;
-	position: absolute;
-	top: 100px;
-	left: 10%;
-	color: white;
+	width: 95%;
+	left: 2.5%;
 }
-
 
 .overlay {
-	background-color: rgba(0,0,0,0.9);
-	width: 65%;
-	height: 700px;
-	position: fixed;
-	top: 15%;
-	left: 17.5%;
-	text-align: center;
-	border-radius: 5px;
-}
-
-#overlay {
-	display: none;
-}
+	width: 90%;
+	top: 20%;
+	left: 5%;
 
 }
+
+
+
+}
+
+
