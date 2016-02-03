@@ -16,10 +16,12 @@ var ContentContainer = React.createClass({
 
     render: function() {
 
+      var h1Style = {marginTop: "150px"}
+
        return (
        	  <div className="content-container">
           
-          	<h1> {this.props.tab} </h1>
+          	<h1 style={h1Style}> {this.props.tab} </h1>
           
             	{this.props.tab === "My Books" ?
                           <MyBooks />

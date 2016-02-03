@@ -3,6 +3,7 @@
 body, html {
 	font-family: "Oswald";
 	height: 100%;
+	background-color: #edeaea;
 }
 
 
@@ -29,6 +30,13 @@ h1 {
 	height: 60px;
 	background: #bcdadb;
 	opacity: 0.9;
+
+}
+
+#rct-header {
+	position: fixed;
+	left: 0;
+	top: 0;
 }
 
 .btn-header {

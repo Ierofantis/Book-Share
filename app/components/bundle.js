@@ -201,12 +201,14 @@ var ContentContainer = React.createClass({
 
             render: function render() {
 
+                        var h1Style = { marginTop: "150px" };
+
                         return React.createElement(
                                     "div",
                                     { className: "content-container" },
                                     React.createElement(
                                                 "h1",
-                                                null,
+                                                { style: h1Style },
                                                 " ",
                                                 this.props.tab,
                                                 " "
