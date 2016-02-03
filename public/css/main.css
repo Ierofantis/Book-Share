@@ -1,0 +1,343 @@
+
+
+body, html {
+	font-family: "Oswald";
+	height: 100%;
+}
+
+
+
+.jumbotron-background { 
+  background: url("../img/books.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+h1 {
+    font-size: 4em;
+    text-shadow: 5px 5px #C2DDDE;
+    color: black;
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke-color: black;
+    text-decoration: blink;
+}
+
+	  
+
+
+
+/* INDEX PAGE */
+
+.header {
+	width: 100%;
+	height: 60px;
+	background: #bcdadb;
+	opacity: 0.9;
+}
+
+.btn-header {
+	float: right;
+	margin: 10px;
+	height: 40px;
+	border: none;
+}
+
+.title {
+	font-size: 2em;
+	font-family: "Oswald";
+	float: left;
+	line-height: 50px;
+	margin: 5px;
+}
+
+.title-img {
+	float: left;
+	height: 50px;
+	margin: 5px 2px 5px 20px;
+}
+
+#signup-container {
+	width: 35%;
+	margin: 80px auto;
+	text-align: center;
+	box-shadow: 0 0 10px 10px gray;
+	padding: 20px;
+	border-radius: 5px;
+	background-color: white;
+	opacity: 0.95;
+}
+
+.btn-facebook {
+	margin-bottom: 20px;
+}
+
+
+#signup-form {
+	width: 90%;
+	color: white;
+	margin: 0px auto;
+
+}
+
+#signup-form label {
+	font-size: 1.1em;
+	font-weight: 100;
+}
+
+#signup-form h2 {
+	padding: 20px;
+	background-color: #2E6DA4;
+}
+
+
+.overlay {
+	background-color: rgba(0,0,0,0.9);
+	width: 35%;
+	height: 500px;
+	position: fixed;
+	top: 20%;
+	left: 32.5%;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: 0 0 10px 10px gray;
+}
+
+#overlay {
+	display: none;
+}
+
+button a, a:hover, a:active, a:visited, a:focus {
+	color: white;
+	display: inline-block;
+	text-decoration: none;
+}
+
+/* MY BOOKS PAGE */
+
+
+
+.book-container {
+	height: 200px;
+	margin: 10px auto;
+}
+
+
+.book-container img {
+	height: 100%;
+	width: 100%;
+    vertical-align: top;
+}
+
+
+
+.alert p {
+	display: inline;
+
+}
+
+.my-books h3 {
+	text-align: center;
+	margin: 40px auto;
+	border-top: 2px solid #B9D3D4;
+	padding-top: 20px;
+}
+
+
+
+.alert i {
+	display: inline;
+}
+
+.active, .inactive {font-size:40px;cursor:pointer;}
+.active, .inactive {font-size:40px;cursor:pointer;}
+i.active { color: #5cb85c}
+i.inactive {color: #d9534f}
+
+/* KEY FOR BOOKS */
+
+.key {
+	display: block;
+	margin: 20px auto;
+	width: 80px;
+}
+
+
+.line-taken {
+	width: 50px;
+	height: 5px;
+	background-color: #D7280B;
+}
+
+.line-available {
+	width: 50px;
+	height: 5px;
+	background-color: #338CD2;
+}
+
+.instructions {
+	width: 350px;
+	margin: 20px auto;
+	text-align: center;
+}
+
+/* PROFILE FORMS */
+
+.user-details {
+	width: 75%;
+	margin: 50px auto;
+}
+
+.user-details h4 {
+	text-align: center;
+}
+
+.input-box {
+	width: 350px;
+	margin: 30px auto;
+	text-align: center;
+}
+
+.input-box input {
+	margin-right: 10px;
+	margin-top: 20px;
+	width: 150px;
+	height: 30px;
+}
+
+.input-box button {
+	height: 30px;
+
+}
+
+/* REQUESTS PAGE */
+
+.requests-for-me h3 {
+	text-align: center;
+	margin: 30px 0px;
+
+}
+
+.my-requests h3 {
+	text-align: center;
+	margin: 30px 0px;
+
+}
+
+/*NAV BUTTONS AND TITLE ON REDUCED WIDTH */
+
+@media (max-width: 800px) {
+
+
+#title-bundle {
+	margin: 0px auto;
+	display: block;
+	width: 100%;
+	text-align: center;
+	overflow: auto;
+}
+
+#button-bundle {
+	margin: 0px auto;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+#rct-header {
+	height: 120px;
+}
+
+#rct-btn {
+	float: none;
+	margin: 10px;
+	height: 40px;
+	border: none;
+	opacity: 0.9;
+}
+
+#rct-title {
+	font-size: 2em;
+	float: none;
+	line-height: 50px;
+	margin-top: 10px;
+	display: inline-block;
+}
+
+#rct-title-img {
+	float: none;
+	height: 50px;
+	margin: -10px 2px 5px 20px;
+	display: inline-block;
+}
+
+
+
+}
+
+
+@media (max-width: 550px) {
+
+
+#rct-header {
+	height: 330px;
+}
+
+#rct-btn {
+	float: none;
+	height: 40px;
+	border: none;
+	opacity: 0.9;
+	display: block;
+	width: 95%;
+	margin: 10px auto;
+}
+
+
+}
+
+
+/* GENERAL FORM STYLING ON REDUCED WIDTH */
+
+
+@media (max-width: 1000px) {
+
+
+
+#signup-container {
+	width: 50%;
+	margin: 80px auto;
+	text-align: center;
+}
+
+#signup-form {
+	width: 75%;
+	position: absolute;
+	top: 100px;
+	left: 10%;
+	color: white;
+}
+
+
+.overlay {
+	background-color: rgba(0,0,0,0.9);
+	width: 65%;
+	height: 700px;
+	position: fixed;
+	top: 15%;
+	left: 17.5%;
+	text-align: center;
+	border-radius: 5px;
+}
+
+#overlay {
+	display: none;
+}
+
+}

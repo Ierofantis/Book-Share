@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BookShare</title>
+
+	<!-- CSS FILES -->
+	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+	<link href="/public/css/main.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.12.0/bootstrap-social.css" rel="stylesheet" type="text/css">
+	
+	<!--JS FILES -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-dom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.28.1/react-bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+<div class="jumbotron-background"</div>
+  
+  <div class="header">
+  <img class="title-img" src="public/img/leaflet.png"/>
+  <p class="title"> BookShare </p>
+  <button class="show-signup btn-header btn btn-primary"> Sign Up </button>
+  </div>
+	<div id="signup-container">
+		<!--FACEBOOK SIGNUP -->
+		<a class="btn btn-social btn-facebook btn-block" href="/auth/facebook">
+		<span class="fa fa-facebook"></span> Sign in with Facebook</a>
+
+		 <% if (loginMessage.length > 0) { %>
+        <div class="alert alert-danger"><%= loginMessage %></div>
+    <% } %>
+
+		<h4> Or Login With Username </h4>
+		<form action="/login" method="post">
+
+		
+
+			<div class="form-group">
+				<label>Username</label>
+				<input type="text" class="form-control" name="username">
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="password" class="form-control" name="password">
+			</div>
+			<button type="submit" class="btn btn-primary btn-block">Sign In</button>
+		</form>
+
+			<p style="margin-top: 10px"> Not got an account yet? </p> <button class="show-signup btn btn-secondary"> Sign Up </button>
+			
+	</div>
+
+
+
+
+        <div id="overlay" class="overlay">
+			<form id="signup-form" action="/signup" method="post">
+
+				<h2> Sign Up </h2>
+		        <div class="form-group">
+
+		        <label>Username</label>
+		        <input type="text" class="form-control" name="username">
+		        </div>
+		        <div class="form-group">
+	            <label>Password</label>
+	            <input type="password" class="form-control" name="password" id="password">
+		        </div>
+
+		        <button type="submit" id="submit" class="btn btn-primary btn-block">Signup</button>
+		        <button class="close-signup btn btn-primary btn-block">Close</button>
+		        <div style="margin-top: 20px" id="password-message"> </div>
+		    </form>
+		</div>
+
+	<!-- IF SIGNUP MESSAGE IS PRESENT --> 
+
+	<% if (signupMessage.length > 0) { %>
+        
+		 <div id="overlay-rendered" class="overlay">
+		 	<div id="password-message"> </div>
+			<form id="signup-form" action="/signup" method="post">
+			<h2> Sign Up Here </h2>
+        	<div class="form-group">
+            <label>Username</label>
+            <input type="text" class="form-control" name="username" >
+        	</div>
+        	<div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password" id="password-returned">
+       	    </div>
+
+	        <button type="submit" class="btn btn-primary">Signup</button>
+	        <button class="close-signup btn btn-primary">Close</button>
+	        <div style="margin-top: 20px" id="password-message-returned"> </div>
+	        <div style="margin-top: 20px" class="alert alert-danger"><%= signupMessage %></div>
+    </form>
+	</div>
+	<% } %>
+
+	
+	
+	<!-- ADD COMPONENTS IN -->
+	<!-- <script type="text/babel" src="components/bundle.js"></script> -->
+		 <script type="text/babel" src="controllers/signupController.js"></script>
+	</div>
+</body>
+</html>
