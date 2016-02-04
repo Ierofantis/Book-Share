@@ -85,11 +85,17 @@ var Profile = React.createClass({
     },
 
     render: function() {
+ 
+      var welcomeText = "Welcome " + this.state.name;
+
+      if (this.state.city && this.state.country) {
+        welcomeText += " from " + this.state.city + ", " + this.state.country;
+      }
 
        return (
        	  <div>
             <div className="user-details"> 
-              <h4> Welcome {this.state.name} from {this.state.city}, {this.state.country}</h4>
+              <h4> {welcomeText} </h4>
               <br/>
               <h4> Add Location Details </h4>
 

@@ -713,6 +713,12 @@ var Profile = React.createClass({
 
   render: function render() {
 
+    var welcomeText = "Welcome " + this.state.name;
+
+    if (this.state.city && this.state.country) {
+      welcomeText += " from " + this.state.city + ", " + this.state.country;
+    }
+
     return React.createElement(
       "div",
       null,
@@ -722,12 +728,9 @@ var Profile = React.createClass({
         React.createElement(
           "h4",
           null,
-          " Welcome ",
-          this.state.name,
-          " from ",
-          this.state.city,
-          ", ",
-          this.state.country
+          " ",
+          welcomeText,
+          " "
         ),
         React.createElement("br", null),
         React.createElement(
