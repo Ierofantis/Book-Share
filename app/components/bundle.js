@@ -1202,4 +1202,4 @@ var props = JSON.parse(document.getElementById("props").innerHTML);
 ReactDOM.render(React.createElement(Header, { books: props, title: "BookShare" }), document.getElementById("react-holder"));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./Header.js":5}]},{},[2,3,9,11,12,17,18,5,6,7,4,13]);
+},{"./Header.js":5}]},{},[5,18]);

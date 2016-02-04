@@ -17,11 +17,12 @@ $(".close-signup").click(function(e) {
 })
 
 $('#signup-form').submit( function(ev) {
-     ev.preventDefault();
-     //later you decide you want to submit
+     
      if (returnBool) {
-     		$(this).unbind('submit').submit()
-
+     		$(this).submit()
+     }
+     else {
+     	ev.preventDefault();
      }
      
 });
@@ -34,7 +35,6 @@ function checkPassword(inputBox, messageBox) {
 	returnBool = false;
 $("#password").on("keyup", function() {
 	var password = $(inputBox).val();
-	console.log(password)
 
 	/*
 	(/^
@@ -48,7 +48,6 @@ $/)
 var regex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8,})$/
 
 	var test = password.match(regex)
-	console.log(test)
 	if (test) {
 		$(messageBox).html(successBox)
 		returnBool = true;
@@ -56,7 +55,6 @@ var regex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8,})$/
 	else {
 		$(messageBox).html(alertBox)
 	}
-	console.log(returnBool)
 	return returnBool;
 	
 })
