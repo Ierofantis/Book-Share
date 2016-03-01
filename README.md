@@ -1,4 +1,4 @@
-# Chart the Night
+# BookShare
 
 ## A book sharing app built with Express, MongoDB, ReactJS and Google Books API.
 

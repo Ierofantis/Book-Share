@@ -75,7 +75,7 @@ module.exports = function (app, passport) {
 		});
 
 	app.route('/')
-		.get(function (req, res) {
+		.get(isLoggedIn, function (req, res) {
 			//IMPORT MODULE AND CREATE COMPONENT
 			var Header = React.createFactory(require("../components/Header.js"));	
 			//GET ALL BOOKS
